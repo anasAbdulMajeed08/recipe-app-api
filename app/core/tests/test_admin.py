@@ -1,6 +1,7 @@
-from django.test import TestCase, Client # Client is test module enabe test requests in our application
+from django.test import TestCase, Client
 from django.contrib.auth import get_user_model
-from django.urls import reverse # Uses to create a url for admin page
+from django.urls import reverse  # Uses to create a url for admin page
+
 
 class AdminSiteTests(TestCase):
     """ Function that runs before test runs """
@@ -14,7 +15,7 @@ class AdminSiteTests(TestCase):
         self.user = get_user_model().objects.create_user(
             email='test@anas.com',
             password='password123',
-            name='Test user full name' 
+            name='Test user full name',
         )
 
     def test_users_listed(self):
